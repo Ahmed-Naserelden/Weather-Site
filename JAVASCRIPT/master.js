@@ -104,51 +104,81 @@
 // console.log(user.checkAv());
 // console.log(user.checkAv());
 // console.log(user.);
+// let user = {
+// name: "ahmed",
+// age: 850,
+// doubleage : function (){
+//     return this.age * 2;
+// }
+// };
+// console.log("--------------user--------------\n");
+// console.log(user);
+// console.log(user.age);
+// console.log(user.doubleage());
+// let copyObj = Object.create(user);
+// // user.age = 10;
+// copyObj.age = 10;
+// console.log("--------------user--------------\n");
+// console.log(user);
+// console.log(user.age);
+// console.log(user.doubleage());
+// console.log("--------------copyObj--------------\n");
+// console.log(copyObj);
+// console.log(copyObj.age);
+// console.log(copyObj.doubleage());
+// user.age = 80;
+// // copyObj.age = 80;
+// console.log("--------------user--------------\n");
+// console.log(user);
+// console.log(user.age);
+// console.log(user.doubleage());
+// console.log("--------------copyObj--------------\n");
+// console.log(copyObj);
+// console.log(copyObj.age);
+// console.log(copyObj.doubleage());
+// console.log(user);
+// console.log(copyObj);
+// let o1 = Object(
+//     {
+//         name: "ahmed",
+//     }
+// );
+// console.log(o1.name);
+// let o2 = Object(
+//     {
+//         age: 19,
+//         mt:(a,b)=>{
+//             console.log("");
+//         }
+//     }
+// );
+// let o3 = Object(
+//     {
+//         id: 20201701053,
+//     }
+// );
+// let o4 = Object.assign({},o1,o2,o3);
+// o4.name = "ALi";
+// o4.age = "ALi";
+// console.log(o4);
+// console.log(o1);
+// console.log(o2);
+// console.log(o3);
 //#endregion
-
-let user = {
-name: "ahmed",
-age: 850,
-doubleage : function (){
-    return this.age * 2;
-}
-};
-console.log("--------------user--------------\n");
-console.log(user);
-console.log(user.age);
-console.log(user.doubleage());
-
-let copyObj = Object.create(user);
-// user.age = 10;
-copyObj.age = 10;
+//<<------- Dom = Documents Object Model------->>
 
 
-console.log("--------------user--------------\n");
-console.log(user);
-console.log(user.age);
-console.log(user.doubleage());
-
-console.log("--------------copyObj--------------\n");
-console.log(copyObj);
-console.log(copyObj.age);
-console.log(copyObj.doubleage());
-
-
-
-user.age = 80;
-// copyObj.age = 80;
+// let myid = document.getElementById("cli");
+// let mytage = document.getElementsByTagName("p");
+// let myclass = document.getElementsByClassName("a")[0].textContent = "AAAAA";
+// let query = document.querySelector("");
+// let queryA = document.querySelectorAll(".a");
+// // console.log(myid);
+// // console.log(mytage[0]);
+// // console.log(mytage[1]);
+// // console.log(mytage[2]);
+// // console.log(myclass[0]);
+document.querySelector("#pid").innerHTML = `<h1>${document.querySelector("#pid").textContent}</h1><br/><br/>`;
 
 
-console.log("--------------user--------------\n");
-console.log(user);
-console.log(user.age);
-console.log(user.doubleage());
-
-console.log("--------------copyObj--------------\n");
-console.log(copyObj);
-console.log(copyObj.age);
-console.log(copyObj.doubleage());
-
-
-console.log(user);
-console.log(copyObj);
+// innerText
