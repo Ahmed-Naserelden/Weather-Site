@@ -105,3 +105,50 @@
 // console.log(user.checkAv());
 // console.log(user.);
 //#endregion
+
+let user = {
+name: "ahmed",
+age: 850,
+doubleage : function (){
+    return this.age * 2;
+}
+};
+console.log("--------------user--------------\n");
+console.log(user);
+console.log(user.age);
+console.log(user.doubleage());
+
+let copyObj = Object.create(user);
+// user.age = 10;
+copyObj.age = 10;
+
+
+console.log("--------------user--------------\n");
+console.log(user);
+console.log(user.age);
+console.log(user.doubleage());
+
+console.log("--------------copyObj--------------\n");
+console.log(copyObj);
+console.log(copyObj.age);
+console.log(copyObj.doubleage());
+
+
+
+user.age = 80;
+// copyObj.age = 80;
+
+
+console.log("--------------user--------------\n");
+console.log(user);
+console.log(user.age);
+console.log(user.doubleage());
+
+console.log("--------------copyObj--------------\n");
+console.log(copyObj);
+console.log(copyObj.age);
+console.log(copyObj.doubleage());
+
+
+console.log(user);
+console.log(copyObj);
