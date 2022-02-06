@@ -188,19 +188,33 @@
 // console.log(im[0].attributes)
 // console.log(im[0].hasAttribute("title"));
 // console.log(im[0].hasAttribute("src"));
-//#endregion
-
-let myElem = document.createElement("div");
-let myAttr = document.createAttribute("data-custom");
-let mycoment = document.createComment("MY COMMENT AHMED");
-myElem.className = "product";
-myElem.setAttribute("data-custom", "testing");
-for(let i = 0; i < 5; i++){
-    let mytext = document.createTextNode("Product One 1  ");
-    myElem.appendChild(mytext);
-}
-myElem.appendChild(mycoment);
-myElem.prepend(mycoment);
-document.body.appendChild(myElem);
-console.log(myElem);
+// let myElem = document.createElement("div");
+// let myAttr = document.createAttribute("data-custom");
+// let mycoment = document.createComment("MY COMMENT AHMED");
+// myElem.className = "product";
+// myElem.setAttribute("data-custom", "testing");
+// for(let i = 0; i < 5; i++){
+//     let mytext = document.createTextNode("Product One 1  ");
+//     myElem.appendChild(mytext);
+// }
+// myElem.appendChild(mycoment);
+// myElem.prepend(mycoment);
+// document.body.appendChild(myElem);
+// console.log(myElem);
 // Append
+//#endregion
+let mydiv, myh1, myp, mytexth, mytextp;
+for(let i = 0; i < 100; i++){
+    mydiv = document.createElement("div");
+    mydiv.setAttribute("class", "product");
+    myh1 = document.createElement("h2");
+    myp = document.createElement("p");
+    mytexth = document.createTextNode(`my Heading ${i+1}`);
+    mytextp = document.createTextNode(`my pragraph ${i+1}`);
+    myp.appendChild(mytextp);
+    myh1.appendChild(mytexth);
+    mydiv.appendChild(myh1);
+    mydiv.appendChild(myp);
+    document.body.appendChild(mydiv);
+}
+
