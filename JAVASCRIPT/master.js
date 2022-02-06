@@ -164,10 +164,7 @@
 // console.log(o1);
 // console.log(o2);
 // console.log(o3);
-//#endregion
 //<<------- Dom = Documents Object Model------->>
-
-
 // let myid = document.getElementById("cli");
 // let mytage = document.getElementsByTagName("p");
 // let myclass = document.getElementsByClassName("a")[0].textContent = "AAAAA";
@@ -178,7 +175,32 @@
 // // console.log(mytage[1]);
 // // console.log(mytage[2]);
 // // console.log(myclass[0]);
-document.querySelector("#pid").innerHTML = `<h1>${document.querySelector("#pid").textContent}</h1><br/><br/>`;
-
-
+//document.querySelector("#pid").innerHTML = `<h1>${document.querySelector("#pid").textContent}</h1><br/><br/>`;
 // innerText
+// let myTagenme = document.getElementsByTagName("p");
+// let im = document.images;
+// console.log(im[0].getAttribute("src"));
+// console.log(im[0].getAttribute("alt"));
+// im[0].setAttribute("src", "");
+// im[0].setAttribute("alt","eman");
+// console.log(im[0].getAttribute("src"));
+// console.log(im[0].getAttribute("alt"));
+// console.log(im[0].attributes)
+// console.log(im[0].hasAttribute("title"));
+// console.log(im[0].hasAttribute("src"));
+//#endregion
+
+let myElem = document.createElement("div");
+let myAttr = document.createAttribute("data-custom");
+let mycoment = document.createComment("MY COMMENT AHMED");
+myElem.className = "product";
+myElem.setAttribute("data-custom", "testing");
+for(let i = 0; i < 5; i++){
+    let mytext = document.createTextNode("Product One 1  ");
+    myElem.appendChild(mytext);
+}
+myElem.appendChild(mycoment);
+myElem.prepend(mycoment);
+document.body.appendChild(myElem);
+console.log(myElem);
+// Append
