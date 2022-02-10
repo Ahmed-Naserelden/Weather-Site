@@ -24,7 +24,6 @@ body{
     width: 100%;
     max-width: 320px;
     height: 80vh;
-    /*? background: url("../Images/OIP.jpg") no-repeat center; */
     background-size: cover;
     border-radius: 10px;
     overflow: hidden;
