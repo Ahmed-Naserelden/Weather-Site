@@ -1,9 +1,23 @@
 const search = document.querySelector(".search");
 const btn = document.querySelector(".btn");
+const city = document.querySelector(".city");
+const today = new Date();
+const date = document.querySelector(".date");
+const temp = document.querySelector(".temp");
+const weather = document.querySelector(".weather");
+const tempRange = document.querySelector(".temp-range");
+const weatherIcon = document.querySelector(".weather-icon");
 btn.addEventListener("click", getInput);
 function getInput(e){
+    
     e.preventDefault();
     if(e.type == "click"){
+        
+        if(search.value === ""){
+            resetAll();
+            error.textContent = "Please Enter A Valid City";
+            return;
+        }
         getData(search.value);
         console.log(search.value);
     }
@@ -18,24 +32,9 @@ function getData(){
 const error = document.querySelector(".error");
 error.textContent="";
 function displayData(response){
-    const city = document.querySelector(".city");
-    const today = new Date();
-    const date = document.querySelector(".date");
-    const temp = document.querySelector(".temp");
-    const weather = document.querySelector(".weather");
-    const tempRange = document.querySelector(".temp-range");
-    const weatherIcon = document.querySelector(".weather-icon");
     if(response.cod == "404"){
-        city.textContent="";
-        date.textContent="";
-        temp.textContent="";
-        weather.textContent="";
-        tempRange.textContent="";
-        weatherIcon.textContent="";
-        weatherIcon.src="";
+        resetAll();
         error.textContent = "Please Enter A Valid City";
-        search.value="";
-
     }else{
         error.textContent="";
         
@@ -61,4 +60,13 @@ function dateFunction (d){
     let year = d.getFullYear(); 
     return `${day}, ${date} ${month} ${year}`;
 }
-let x = 10;
+function resetAll(){
+    city.textContent="";
+    date.textContent="";
+    temp.textContent="";
+    weather.textContent="";
+    tempRange.textContent="";
+    weatherIcon.textContent="";
+    weatherIcon.src="";
+    search.value="";
+}
