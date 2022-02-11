@@ -82,11 +82,13 @@ body{
     text-transform: uppercase;
     border-radius: 15px;
     cursor: pointer;
+    
 }
 .top button:hover{
     background-color: #8e26e2;
     outline: 3px solid white;
-    
+    letter-spacing: 3px;
+    color: rgb(40, 255, 40);
 }
 .top .error{
     color: white;

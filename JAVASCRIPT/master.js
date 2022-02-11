@@ -9,10 +9,8 @@ const tempRange = document.querySelector(".temp-range");
 const weatherIcon = document.querySelector(".weather-icon");
 btn.addEventListener("click", getInput);
 function getInput(e){
-    
     e.preventDefault();
     if(e.type == "click"){
-        
         if(search.value === ""){
             resetAll();
             error.textContent = "Please Enter A Valid City";
@@ -37,9 +35,7 @@ function displayData(response){
         error.textContent = "Please Enter A Valid City";
     }else{
         error.textContent="";
-        
         city.innerText = `${response.name}, ${response.sys.country}`;
-        
         date.innerText = dateFunction(today);
         temp.innerHTML = `Temp: ${Math.round(response.main.temp)} <span>°C</span>`;
         weather.innerText = `Weather: ${response.weather[0].main}`;
@@ -69,4 +65,7 @@ function resetAll(){
     weatherIcon.textContent="";
     weatherIcon.src="";
     search.value="";
+}
+window.onload = function(){
+    search.focus();
 }
